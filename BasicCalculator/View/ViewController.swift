@@ -27,9 +27,11 @@ class ViewController: UIViewController {
         //  desingButton()
     }
     
-    @IBAction func numbers(_ sender: UIButton) {
+    @IBAction func numbers(_ sender: UIButton)
+    {
         
-        if performingMath == true {
+        if performingMath == true
+        {
             hideLabel.text = String(sender.tag)
             twoNumberOnScreen = Int(hideLabel.text!)!
             performingMath = false
@@ -39,7 +41,7 @@ class ViewController: UIViewController {
             hideLabel.text = hideLabel.text! + String(sender.tag)
             twoNumberOnScreen = Int(hideLabel.text!)!
             
-            }
+        }
        
         
         label.text = label.text! + String(sender.tag)
@@ -51,7 +53,8 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func buttons(_ sender: UIButton) {
+    @IBAction func buttons(_ sender: UIButton)
+    {
         
         if label.text != "" && sender.tag != 11 && sender.tag != 17
         {
@@ -87,17 +90,13 @@ class ViewController: UIViewController {
         }
         else if sender.tag == 17
         {
-            
             if process == 12
             {
-                
                 label.text = String(previousNumber)
             }
            else if process == 13
             {
-            
             label.text = String(previousNumber / twoNumberOnScreen)
-            
             }
            else if process == 14
             {
@@ -105,9 +104,7 @@ class ViewController: UIViewController {
             }
            else if process == 15
             {
-            
             label.text = String(previousNumber - twoNumberOnScreen)
-            
             }
            else if process == 16
             {
@@ -116,14 +113,9 @@ class ViewController: UIViewController {
           
            else if process == 18
             {
-            //hideLabel.text?.remove(at: Int(hideLabel.text - 1))
             label.text?.removeLast()
-            
             }
-           /*else if process == 19
-            {
-            label.text = String(previousNumber + twoNumberOnScreen)
-            }*/
+          
             
         }
         else if sender.tag == 11
@@ -135,35 +127,5 @@ class ViewController: UIViewController {
             previousNumber = 0
             twoNumberOnScreen = 0
         }
-        
-        /*
-         clear 11
-         yüzde 12
-         böl 13/12
-         çarp 14/13
-         eksi 15/14
-         artı 16/15
-         eşittir 17/16
-         sil 18
-         virgül 19
-         */
     }
-    
-    
-    
-    
-    
-    
-    /*func desingButton(){
-        let buttonDesingModel = desingModelButton()
-       
-     //   buttonDesingModel.buttonShadow(oneButton)
-      
-        
-        
-        
-        
-       
-    }*/
 }
-
